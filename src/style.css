@@ -1,0 +1,62 @@
+body {
+  margin: 0 auto;
+}
+
+h1 {
+  margin-left: 15%;
+  font-size: 50px;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+}
+
+.container1 {
+  width: 30%;
+}
+
+.subcontainer1 {
+  display: flex;
+  align-items: center;
+}
+
+h2 {
+  width: 60%;
+  font-size: 35px;
+}
+
+button {
+  width: 20%;
+  padding: 0;
+}
+
+.container2 {
+  width: 30%;
+}
+
+.container1 ul {
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  padding: 0;
+  border: solid 2px black;
+  width: 75%;
+}
+
+li {
+  list-style-type: none;
+  font-size: 17px;
+  background-color: gray;
+  height: 30%;
+  padding: 2%;
+}
+
+li:nth-child(even) {
+  background-color: white;
+}
+
+input {
+  margin-bottom: 5%;
+  width: 60%;
+}
