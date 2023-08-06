@@ -21,11 +21,11 @@
 
 <!-- PROJECT DESCRIPTION -->
 
-# 📖 To do list <a name="about-project"></a>
+# 📖Leaderboard <a name="about-project"></a>
 
 
 
-**To do list** is a wonderful  project to manage your activities in a day.
+**Leaderboard** is a wonderful  project to see the score of the users.
 
 ## 🛠 Built With <a name="built-with"></a>
 
