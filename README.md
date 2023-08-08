@@ -44,9 +44,9 @@
 
 
 
--  **input fields**
-- **button**
-- **dynamic list**
+-  **showing scores**
+- **input fields**
+- **Refresh function**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
