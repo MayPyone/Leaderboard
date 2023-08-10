@@ -3,8 +3,17 @@ body {
 }
 
 h1 {
+  width: 22%;
   margin-left: 15%;
   font-size: 50px;
+  position: relative;
+  animation: myfirst 5s linear 0.5s infinite alternate;
+}
+
+@keyframes myfirst {
+  50% {
+    background-color: red;
+  }
 }
 
 .container {
