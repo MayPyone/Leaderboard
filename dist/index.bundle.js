@@ -115,7 +115,27 @@ eval("\n\n/* istanbul ignore next  */\nfunction styleTagTransform(css, styleElem
   \**********************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _style_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./style.css */ \"./src/style.css\");\n\n\n//# sourceURL=webpack://webpack-boilerplate/./src/index.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _style_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./style.css */ \"./src/style.css\");\n/* harmony import */ var _module_Add_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./module/Add.js */ \"./src/module/Add.js\");\n/* harmony import */ var _module_getdata_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./module/getdata.js */ \"./src/module/getdata.js\");\n\r\n\r\n\r\n//  const user = document.querySelector('.users');\r\n//  const score = document.querySelector('.scores');\r\nconst submit = document.querySelector('.submit');\r\n//   const refresh = document.querySelector('.refresh');\r\n//  submit.addEventListener('click',()=>()=>console.log(\"test\"));\r\nconsole.log('test');\r\n// test();\r\n// submitting();\r\n(0,_module_getdata_js__WEBPACK_IMPORTED_MODULE_2__[\"default\"])();\r\n(0,_module_Add_js__WEBPACK_IMPORTED_MODULE_1__.submitting)();\n\n//# sourceURL=webpack://webpack-boilerplate/./src/index.js?");
+
+/***/ }),
+
+/***/ "./src/module/Add.js":
+/*!***************************!*\
+  !*** ./src/module/Add.js ***!
+  \***************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   add: () => (/* binding */ add),\n/* harmony export */   clear: () => (/* binding */ clear),\n/* harmony export */   submitting: () => (/* binding */ submitting)\n/* harmony export */ });\nconst add = async (player, scores) => {\r\n  if (player !== '' && scores !== '') {\r\n    await fetch('https://us-central1-js-capstone-backend.cloudfunctions.net/api/games/cf3Cr4pDGiMnG7DbId9H/scores/', {\r\n      method: 'POST',\r\n      headers: {\r\n        'Content-Type': 'application/json',\r\n      },\r\n      body: JSON.stringify(player, scores),\r\n    });\r\n  }\r\n};\r\n\r\nconst clear = () => {\r\n  const user = document.querySelector('.users');\r\n  const score = document.querySelector('.scores');\r\n  const submit = document.querySelector('.submit');\r\n};\r\n\r\nconst submitting = () => {\r\n  const user = document.querySelector('.users');\r\n  const score = document.querySelector('.scores');\r\n  const submit = document.querySelector('.submit');\r\n  submit.addEventListener('click', () => add({ user: user.value, score: score.value }));\r\n};\n\n//# sourceURL=webpack://webpack-boilerplate/./src/module/Add.js?");
+
+/***/ }),
+
+/***/ "./src/module/getdata.js":
+/*!*******************************!*\
+  !*** ./src/module/getdata.js ***!
+  \*******************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\nconst getData = () => {\r\n  const refresh = document.querySelector('.refresh');\r\n  refresh.addEventListener('click', async () => {\r\n    await fetch('https://us-central1-js-capstone-backend.cloudfunctions.net/api/games/cf3Cr4pDGiMnG7DbId9H/scores/')\r\n      .then((response) => response.json())\r\n      .then((json) => {\r\n        document.querySelector('ul').innerHTML = '';\r\n        json.result.forEach((user) => {\r\n          document.querySelector('ul').innerHTML += ` <li><span>${user.user} </span>: <span>${user.score}</span></li> `;\r\n        });\r\n      });\r\n  });\r\n};\r\n\r\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (getData);\n\n//# sourceURL=webpack://webpack-boilerplate/./src/module/getdata.js?");
 
 /***/ })
 
