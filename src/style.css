@@ -3,8 +3,17 @@ body {
 }
 
 h1 {
+  width: 22%;
   margin-left: 15%;
   font-size: 50px;
+  position: relative;
+  animation: myfirst 5s linear 0.5s infinite alternate;
+}
+
+@keyframes myfirst {
+  50% {
+    background-color: red;
+  }
 }
 
 .container {
@@ -32,7 +41,7 @@ button {
 }
 
 .container2 {
-  width: 30%;
+  width: 40%;
 }
 
 .container1 ul {
@@ -47,7 +56,7 @@ button {
 li {
   list-style-type: none;
   font-size: 17px;
-  background-color: gray;
+  background-color: red;
   height: 30%;
   padding: 2%;
 }
@@ -59,4 +68,13 @@ li:nth-child(even) {
 input {
   margin-bottom: 5%;
   width: 60%;
+}
+
+button:hover {
+  background-color: rgb(238, 62, 62);
+  box-shadow: 0 2px 10px;
+}
+
+button:active {
+  background-color: red;
 }
