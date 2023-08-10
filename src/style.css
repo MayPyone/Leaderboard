@@ -32,7 +32,7 @@ button {
 }
 
 .container2 {
-  width: 30%;
+  width: 40%;
 }
 
 .container1 ul {
@@ -47,7 +47,7 @@ button {
 li {
   list-style-type: none;
   font-size: 17px;
-  background-color: gray;
+  background-color: red;
   height: 30%;
   padding: 2%;
 }
@@ -59,4 +59,13 @@ li:nth-child(even) {
 input {
   margin-bottom: 5%;
   width: 60%;
+}
+
+button:hover {
+  background-color: rgb(238, 62, 62);
+  box-shadow: 0 2px 10px;
+}
+
+button:active {
+  background-color: red;
 }
